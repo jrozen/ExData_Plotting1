@@ -22,7 +22,7 @@ dsf$DateTime <- as.POSIXct(paste(dsf$Date, dsf$Time), format="%d/%m/%Y %H:%M:%S"
 ## Due to swedish locale the abbr for weekdays are in swedish
 plot.new()
 
-png(filename = "plot2.png", width = 480, height = 480, units = "px")
+png(filename = "plot2.png", width = 480, height = 480, units = "px", bg="transparent")
 
 plot(dsf$DateTime, dsf$Global_active_power, type="l", xlab=NA,
      ylab="Global active power (kilowatts)")
