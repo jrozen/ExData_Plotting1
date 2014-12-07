@@ -1,4 +1,4 @@
-## The household_power_consumption.txt should be in the working direcory
+## The household_power_consumption.txt should be in the working directory
 ds <- read.csv("household_power_consumption.txt", sep=";", 
                colClasses = c("character", 
                               "character", 
@@ -18,13 +18,13 @@ rm(ds)
 ## Create a date time column
 dsf$DateTime <- as.POSIXct(paste(dsf$Date, dsf$Time), format="%d/%m/%Y %H:%M:%S")
 
-## Create a png device and plot a histogram over global active power
+## Create a png device and plot a line diagram over global active power
 ## Due to swedish locale the abbr for weekdays are in swedish
 plot.new()
 
 png(filename = "plot2.png", width = 480, height = 480, units = "px", bg="transparent")
 
 plot(dsf$DateTime, dsf$Global_active_power, type="l", xlab=NA,
-     ylab="Global active power (kilowatts)")
+     ylab="Global Active Power (kilowatts)")
 
 dev.off()

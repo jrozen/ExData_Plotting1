@@ -1,4 +1,4 @@
-## The household_power_consumption.txt should be in the working direcory
+## The household_power_consumption.txt should be in the working directory
 ds <- read.csv("household_power_consumption.txt", sep=";", 
       colClasses = c("character", 
                     "character", 
